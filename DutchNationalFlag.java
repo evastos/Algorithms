@@ -5,6 +5,12 @@ package com.facebook.eva.algorithm;
  */
 public class DutchNationalFlag {
 
+    /**
+     * Given an array of patient files, sort files by importance.
+     * Importance values: low, medium and high.
+     * http://www.careercup.com/question?id=5080405046722560
+     */
+
     enum Importance {
         HIGH, MEDIUM, LOW
     }
@@ -53,7 +59,10 @@ public class DutchNationalFlag {
             count[files[i].getImportance().ordinal()]++;
         }
 
-        final int high = 0, medium = count[Importance.HIGH.ordinal()], low = count[Importance.HIGH.ordinal()] + count[Importance.MEDIUM.ordinal()];
+        final int high = 0;
+        final int medium = count[Importance.HIGH.ordinal()];
+        final int low = count[Importance.HIGH.ordinal()] + count[Importance.MEDIUM.ordinal()];
+
         for (int i = 0; i < files.length; i++) {
             File file = files[i];
             Importance targetImportance;

@@ -9,7 +9,11 @@ import java.util.List;
  */
 public class Anagrams {
 
-    private static final String[] STRINGS = new String[] {"star", "astr", "car", "rac", "st"};
+    /**
+     * Given an array of strings, return a list of grouped anagrams.
+     */
+
+    private static final String[] STRINGS = new String[]{"star", "astr", "car", "rac", "st"};
 
     public static String testGroupAnagrams() {
         return groupAnagrams(STRINGS).toString();
@@ -18,7 +22,7 @@ public class Anagrams {
     public static List<List<String>> groupAnagrams(String[] strings) {
         HashMap<String, List<String>> result = new HashMap<String, List<String>>();
 
-        for(int i = 0; i < strings.length; i++) {
+        for (int i = 0; i < strings.length; i++) {
             final String str = strings[i];
             String sortedStr = sortString(str);
             if (result.containsKey(sortedStr)) {
@@ -26,7 +30,9 @@ public class Anagrams {
                 anagrams.add(str);
                 result.put(sortedStr, anagrams);
             } else {
-                result.put(sortedStr, new ArrayList() {{add(str);}});
+                result.put(sortedStr, new ArrayList() {{
+                    add(str);
+                }});
             }
         }
 

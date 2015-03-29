@@ -16,6 +16,7 @@ public class Trees {
         private int value;
         private TreeNode leftChild = null;
         private TreeNode rightChild = null;
+
         public TreeNode(int value) {
             this.value = value;
         }
@@ -43,8 +44,8 @@ public class Trees {
     }
 
     public static String testSumsForTreePaths() {
-       StringBuilder builder = new StringBuilder();
-       List<Integer> sums = getSumsFromTreePaths(createTree(), null, 0);
+        StringBuilder builder = new StringBuilder();
+        List<Integer> sums = getSumsFromTreePaths(createTree(), null, 0);
         for (Integer sum : sums) {
             builder.append("sum = ").append(sum).append(" - ");
         }
@@ -62,8 +63,8 @@ public class Trees {
             return;
         }
 
-        root.setLeftChild(new TreeNode(2*i + 1));
-        root.setRightChild(new TreeNode(2*i + 2));
+        root.setLeftChild(new TreeNode(2 * i + 1));
+        root.setRightChild(new TreeNode(2 * i + 2));
 
         addNode(root.getLeftChild(), root.getLeftChild().getValue());
         addNode(root.getRightChild(), root.getRightChild().getValue());
@@ -82,9 +83,9 @@ public class Trees {
         if (i == 1 && fuckItUp) {
             root.setLeftChild(new TreeNode(root.getValue() + 100));
         } else {
-            root.setLeftChild(new TreeNode(root.getValue() - 100 /(i + 1)));
+            root.setLeftChild(new TreeNode(root.getValue() - 100 / (i + 1)));
         }
-        root.setRightChild(new TreeNode(root.getValue() + 100 /(i + 1)));
+        root.setRightChild(new TreeNode(root.getValue() + 100 / (i + 1)));
 
         addBSTNode(root.getLeftChild(), i + 1, fuckItUp);
         addBSTNode(root.getRightChild(), i + 1, fuckItUp);
@@ -110,8 +111,6 @@ public class Trees {
         sums = getSumsFromTreePaths(node.getRightChild(), sums, sum);
         return sums;
     }
-
-    /* Breadth-first search/traversal, traverse level order binary tree, print, serialize/deserialize, print the sum of each row */
 
     public static String testPrintTreeLevelByLevel() {
         return printTreeLevelByLevel(createTree());
@@ -156,11 +155,14 @@ public class Trees {
         return result.toString();
     }
 
-    /* Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.
-
-Calling next() will return the next smallest number in the BST.
-
-Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree. */
+    /**
+     * Implement an iterator over a binary search tree (BST). Your iterator will be initialized
+     * with the root node of a BST.
+     * <p/>
+     * Calling next() will return the next smallest number in the BST.
+     * <p/>
+     * Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree.
+     */
 
     public static String testTreeIterator() {
         StringBuilder result = new StringBuilder();
@@ -168,7 +170,7 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
         result.append(testPrintTreeLevelByLevel());
         result.append("\n");
         TreeIterator iterator = new TreeIterator(createTree());
-        while(iterator.hasNext()) {
+        while (iterator.hasNext()) {
             TreeNode n = iterator.next();
             result.append(n.getValue()).append(" ");
         }
@@ -196,7 +198,7 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
 
         private void addNodeToStack(TreeNode node) {
             nodes.push(node);
-            while(node.getLeftChild() != null) {
+            while (node.getLeftChild() != null) {
                 node = node.getLeftChild();
                 nodes.push(node);
             }
@@ -207,7 +209,9 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
         }
     }
 
-    /* Given root of binary search tree and K as input, find K-th smallest element in BST. */
+    /**
+     * Given root of binary search tree and K as input, find K-th smallest element in BST.
+     */
 
     private static final int K = 14;
 
@@ -243,13 +247,13 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
         nodes.push(root);
 
         TreeNode node = root;
-        while(node.getLeftChild() != null) {
+        while (node.getLeftChild() != null) {
             node = node.getLeftChild();
             nodes.push(node);
         }
 
         node = null;
-        while(k > 0) {
+        while (k > 0) {
             if (nodes.isEmpty()) {
                 break;
             }
@@ -257,7 +261,7 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
             if (node.getRightChild() != null) {
                 TreeNode nodeRight = node.getRightChild();
                 nodes.push(nodeRight);
-                while(nodeRight.getLeftChild() != null) {
+                while (nodeRight.getLeftChild() != null) {
                     nodeRight = nodeRight.getLeftChild();
                     nodes.push(nodeRight);
                 }
@@ -276,13 +280,13 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
         nodes.push(root);
 
         TreeNode node = root;
-        while(node.getRightChild() != null) {
+        while (node.getRightChild() != null) {
             node = node.getRightChild();
             nodes.push(node);
         }
 
         node = null;
-        while(k > 0) {
+        while (k > 0) {
             if (nodes.isEmpty()) {
                 break;
             }
@@ -290,7 +294,7 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
             if (node.getLeftChild() != null) {
                 TreeNode nodeLeft = node.getLeftChild();
                 nodes.push(nodeLeft);
-                while(nodeLeft.getRightChild() != null) {
+                while (nodeLeft.getRightChild() != null) {
                     nodeLeft = nodeLeft.getRightChild();
                     nodes.push(nodeLeft);
                 }
@@ -320,13 +324,13 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
         nodes.push(root);
 
         TreeNode node = root;
-        while(node.getLeftChild() != null) {
+        while (node.getLeftChild() != null) {
             node = node.getLeftChild();
             nodes.push(node);
         }
 
         TreeNode prevNode = null;
-        while(!nodes.isEmpty()) {
+        while (!nodes.isEmpty()) {
             TreeNode currentNode = nodes.pop();
             if (prevNode != null && prevNode.getValue() > currentNode.getValue()) {
                 return false;
@@ -335,7 +339,7 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
             if (currentNode.getRightChild() != null) {
                 TreeNode nodeRight = currentNode.getRightChild();
                 nodes.push(nodeRight);
-                while(nodeRight.getLeftChild() != null) {
+                while (nodeRight.getLeftChild() != null) {
                     nodeRight = nodeRight.getLeftChild();
                     nodes.push(nodeRight);
                 }
@@ -345,7 +349,7 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
     }
 
     public static boolean validateBinarySearchTreeRecursive(TreeNode root) {
-         return validateBinarySearchTreeRecursive(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        return validateBinarySearchTreeRecursive(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 
     public static boolean validateBinarySearchTreeRecursive(TreeNode node, int min, int max) {

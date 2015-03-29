@@ -5,7 +5,9 @@ package com.facebook.eva.algorithm;
  */
 public class StrStr {
 
-    /* Implement strstr() to find a substring in a string */
+    /**
+     * Implement strstr() to find a substring in a string.
+     */
 
     public static int strStr(String str, String subStr) {
         if (str == null || subStr == null || subStr.length() > str.length()) {

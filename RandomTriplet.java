@@ -12,6 +12,18 @@ import java.util.List;
  */
 public class RandomTriplet {
 
+    /**
+     * Given a function
+     * getRandomTriplet()
+     * which returns a random triplet of letters from a string
+     * and a length of the string
+     * guess the string.
+     * <p/>
+     * http://www.careercup.com/question?id=5667679415304192
+     * <p/>
+     * This is a partial solution - works only for strings with non-repeating characters. *
+     */
+
     private static final String FROM_STRING = "abcdefghijklmnoprstuvz";
 
     public static String guessString() {
@@ -74,12 +86,13 @@ public class RandomTriplet {
             while (pairs.size() > 1) {
                 final String triplet = getRandomTriplet();
                 for (int i = 0, value = 1; i < triplet.length(); i++) {
-                    final char tripletChar = triplet.charAt(i);
+                    char tripletChar = triplet.charAt(i);
 
                     int countOfCharInString = countOfCharInString(stringArr, tripletChar);
-                   if (countOfCharInString >= 1) {
-                       continue;
+                    if (countOfCharInString >= 1) {
+                        continue;
                     }
+
                     CharPair charPair = new CharPair(tripletChar,
                             value);
                     updateFirstCharPair(pairs, charPair);
@@ -144,9 +157,6 @@ public class RandomTriplet {
         return count;
     }
 
-
-
-
     private static String getRandomTriplet(String fromString) {
         if (fromString == null) {
             throw new IllegalArgumentException("Input parameter must not be null");
@@ -179,6 +189,5 @@ public class RandomTriplet {
     private static int getRandomIndex(int length) {
         return (int) (Math.random() * length);
     }
-
 
 }

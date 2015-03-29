@@ -7,7 +7,9 @@ import java.util.Stack;
  */
 public class Operators {
 
-    /* Calculate input strings with operators +-*/
+    /**
+     * Calculate an expression with operators '+','-','*','/'.
+     */
 
     private static final char ADD = '+';
     private static final char SUBTRACT = '-';
@@ -60,7 +62,7 @@ public class Operators {
             }
         }
 
-        while(!operands.isEmpty()) {
+        while (!operands.isEmpty()) {
             result += operands.pop();
         }
 
@@ -68,12 +70,17 @@ public class Operators {
     }
 
     private static int execute(int a, int b, char operator) {
-        switch(operator) {
-            case ADD: return a + b;
-            case SUBTRACT: return a - b;
-            case MULTIPLY: return a * b;
-            case DIVIDE: return a / b;
-            default: return a;
+        switch (operator) {
+            case ADD:
+                return a + b;
+            case SUBTRACT:
+                return a - b;
+            case MULTIPLY:
+                return a * b;
+            case DIVIDE:
+                return a / b;
+            default:
+                return a;
         }
     }
 }

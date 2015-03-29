@@ -12,6 +12,10 @@ import java.util.Set;
  */
 public class Arrays {
 
+    /**
+     * Remove duplicate characters from an array.
+     */
+
     public static final char[] DUPLICATES_ARRAY = "banadnaszonanas".toCharArray();
 
     public static String testRemoveDuplicates() {
@@ -53,7 +57,11 @@ public class Arrays {
         arr[j] = temp;
     }
 
-    private static final char[] ARRAY_B = new char[]{ '1', '3', '4', '_', '_', '_',
+    /**
+     * Merge sorted arrays. Assume one of the arrays has the size of both arrays combined.
+     */
+
+    private static final char[] ARRAY_B = new char[]{'1', '3', '4', '_', '_', '_',
             '_'};
     private static final char[] ARRAY_A = new char[]{'2', '3', '6', '8'};
 
@@ -96,7 +104,9 @@ public class Arrays {
         }
     }
 
-    /* Remove Bs duplicate As */
+    /**
+     * Remove Bs duplicate As from an array with no additional space complexity.
+     */
 
     private static final String AB_ARRAY = "aagaa22312aaasbbb4bb6bb";
 
@@ -109,10 +119,10 @@ public class Arrays {
         int b = 0;
 
         while (a < arr.length && b < arr.length) {
-            while(a < arr.length && arr[a] != 'a') {
+            while (a < arr.length && arr[a] != 'a') {
                 a++;
             }
-            while(b < arr.length && arr[b] != 'b') {
+            while (b < arr.length && arr[b] != 'b') {
                 b++;
             }
 
@@ -149,6 +159,8 @@ public class Arrays {
             }
         }
     }
+
+    /* Given an array of integers, group elements which sum up to the same value. */
 
     public static void printSums(int[] arr) {
         HashMap<Integer, ArrayList<Pair<Integer, Integer>>> sumMap = new HashMap<Integer, ArrayList<Pair<Integer, Integer>>>();
@@ -189,6 +201,11 @@ public class Arrays {
         System.out.format("Pairs for sum %d are: %s", sum, builder.toString());
     }
 
+    /**
+     * Given an array of ages (integers) sorted lowest to highest, output the number of
+     * occurrences for each age.
+     * http://www.careercup.com/question?id=5129701993480192
+     */
 
     public static void printNumberOfAges(int[] ages) {
         int maxAge = ages[ages.length - 1];

@@ -5,7 +5,7 @@ package com.facebook.eva.algorithm;
  */
 public class BitwiseDivision {
 
-    /* Implement division without using * or / */
+    /** Implement division without using * or / **/
 
     private static int bitwiseDivisionRecursive(int a, int b, int result) {
         int resultMid = 1;

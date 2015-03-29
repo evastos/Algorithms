@@ -8,6 +8,8 @@ import java.util.List;
  */
 public class Arrays3Sum {
 
+    /** Given an array of numbers (integers), find elements which sum up to the target sum. **/
+
     private static final int[] ARRAY_3_SUM = new int[] {1, 4, 4, -1, -2, -6, 100, 3, 20, -10, -7,
             0};
 

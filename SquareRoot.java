@@ -5,7 +5,9 @@ package com.facebook.eva.algorithm;
  */
 public class SquareRoot {
 
-    /* Binary search for square root */
+    /**
+     * Binary search for square root.
+     */
 
     public static int squareRoot(int x) {
         if (x == 0) {
@@ -20,7 +22,7 @@ public class SquareRoot {
 
         int sqrt = (start + end) / 2;
 
-        while(sqrt * sqrt != x && end - start > 1) {
+        while (sqrt * sqrt != x && end - start > 1) {
             if (sqrt * sqrt > x) {
                 end = (end + start) / 2;
             } else {

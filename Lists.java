@@ -5,7 +5,9 @@ package com.facebook.eva.algorithm;
  */
 public class Lists {
 
-    /* Reverse a linked list: recursive and non-recursive method */
+    /**
+     * Reverse a linked list: recursive and non-recursive method.
+     */
 
     static class Node {
 
@@ -71,7 +73,4 @@ public class Lists {
         }
         return reverseLinkedListRecursive(node, nextNode);
     }
-
-
-
 }

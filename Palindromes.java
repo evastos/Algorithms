@@ -5,6 +5,13 @@ package com.facebook.eva.algorithm;
  */
 public class Palindromes {
 
+    /**
+     * A k-palindrome is a string which transforms into a palindrome on removing at most k characters.
+     * Given a string s and integer k, determine if a string is k-palindrome.
+     * <p/>
+     * http://stackoverflow.com/questions/20892506/determine-if-a-given-string-is-a-k-palindrome
+     */
+
     public static boolean isKPalindrome(String s, int k) {
         if (s.length() <= 1) {
             return true;
@@ -19,7 +26,7 @@ public class Palindromes {
         int begin = 0;
         int end = s.length() - 1;
 
-        while(begin < end && s.charAt(begin) == s.charAt(end)) {
+        while (begin < end && s.charAt(begin) == s.charAt(end)) {
             begin++;
             end--;
         }
