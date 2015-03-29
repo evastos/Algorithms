@@ -158,7 +158,9 @@ public class Arrays {
         }
     }
 
-    /* Given an array of integers, group elements which sum up to the same value. */
+    /**
+     * Given an array of integers, group elements which sum up to the same value.
+     */
 
     public static void printSums(int[] arr) {
         HashMap<Integer, ArrayList<Pair<Integer, Integer>>> sumMap = new HashMap<Integer, ArrayList<Pair<Integer, Integer>>>();

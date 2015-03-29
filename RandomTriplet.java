@@ -19,7 +19,7 @@ public class RandomTriplet {
      * <p/>
      * http://www.careercup.com/question?id=5667679415304192
      * <p/>
-     * This is a partial solution - works only for strings with non-repeating characters. *
+     * This is a partial solution - works only for strings with non-repeating characters.
      */
 
     private static final String FROM_STRING = "abcdefghijklmnoprstuvz";

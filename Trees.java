@@ -89,6 +89,10 @@ public class Trees {
         addBSTNode(root.getRightChild(), i + 1, fuckItUp);
     }
 
+    /**
+     * Given root of binary tree, return a list of sums for all root-leaf paths.
+     */
+
     public static List<Integer> getSumsFromTreePaths(TreeNode node, List<Integer> sums, int sum) {
         if (sums == null) {
             sums = new ArrayList<Integer>();
@@ -109,6 +113,10 @@ public class Trees {
         sums = getSumsFromTreePaths(node.getRightChild(), sums, sum);
         return sums;
     }
+
+    /**
+     * Print binary tree level by level.
+     */
 
     public static String testPrintTreeLevelByLevel() {
         return printTreeLevelByLevel(createTree());
@@ -208,7 +216,7 @@ public class Trees {
     }
 
     /**
-     * Given root of binary search tree and K as input, find K-th smallest element in BST.
+     * Given root of binary search tree and K as input, find K-th smallest/largest element in BST.
      */
 
     private static final int K = 14;
@@ -301,6 +309,10 @@ public class Trees {
         }
         return node;
     }
+
+    /**
+     * Validate binary search tree.
+     */
 
     public static String testValidateBST() {
         StringBuilder result = new StringBuilder();

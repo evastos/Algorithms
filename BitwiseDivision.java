@@ -3,7 +3,9 @@
  */
 public class BitwiseDivision {
 
-    /** Implement division without using * or / **/
+    /**
+     * Implement division without using * or /
+     */
 
     private static int bitwiseDivisionRecursive(int a, int b, int result) {
         int resultMid = 1;
@@ -27,7 +29,7 @@ public class BitwiseDivision {
         int result = 0;
         int resultMid = 1;
         int newB = b;
-        while(true) {
+        while (true) {
             while (newB < a) {
                 newB = newB << 1;
                 resultMid = resultMid << 1;
