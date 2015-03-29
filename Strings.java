@@ -1,5 +1,3 @@
-package com.facebook.eva.algorithm;
-
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -9,6 +7,10 @@ import java.util.Set;
  * Created by Eva on 14.2.2015..
  */
 public class Strings {
+
+    /**
+     * Reverse a char array with no additional space complexity.
+     */
 
     public static void inplaceReverse(char[] arr, int length) {
         if (arr == null || arr.length == 0) {
@@ -38,7 +40,6 @@ public class Strings {
         }
 
         reverse(arr, wordBegin, arr.length - 1);
-
     }
 
     public static void reverse(char[] arr, int begin, int end) {
@@ -54,6 +55,11 @@ public class Strings {
             end--;
         }
     }
+
+    /**
+     * Given two strings, check if they are one edit apart.
+     * Edit = delete, insert or replace.
+     */
 
     public static boolean isOneEditApart(String s1, String s2) {
         if (s1 == null || s2 == null) {
@@ -106,6 +112,11 @@ public class Strings {
             }
         }
     }
+
+    /**
+     * Given a string and a set of characters, find minimum substring which contains all the
+     * characters from the set.
+     */
 
     private static final String MY_STRING = "ADABACOBECODEBANC";
     private static final Character[] SET_VALUES = new Character[] { 'B', 'C', 'O' };
@@ -189,6 +200,10 @@ public class Strings {
         return substring;
     }
 
+    /**
+     * Check if given strings are anagrams.
+     */
+
     private static final String ANAGRAM1 = "hahahahahhahahahahahhaha";
     private static final String ANAGRAM2 = "hahhahahahahahahahahahah";
 
@@ -238,6 +253,10 @@ public class Strings {
             return false;
         }
     }
+
+    /**
+     * Given a string, return a set of permutations for that string.
+     */
 
     public static HashSet<String> getStringPermutations(String str) {
         HashSet<String> permutations = new HashSet<String>();

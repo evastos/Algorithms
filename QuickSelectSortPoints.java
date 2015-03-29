@@ -1,9 +1,12 @@
-package com.facebook.eva.algorithm;
-
 /**
  * Created by Eva on 18.2.2015..
  */
 public class QuickSelectSortPoints {
+
+    /**
+     * Given an array of points, find K closest point to the origin in a 2D plane.
+     * http://www.careercup.com/question?id=4751976126480384
+     */
 
     public static String testKClosestPoints() {
         return java.util.Arrays.toString(findKClosestPoints(POINTS, new Point(0.0, 0.0), K));

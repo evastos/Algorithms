@@ -1,5 +1,3 @@
-package com.facebook.eva.algorithm;
-
 import android.util.Pair;
 
 import java.util.ArrayList;

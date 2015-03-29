@@ -1,5 +1,3 @@
-package com.facebook.eva.algorithm;
-
 import java.util.Stack;
 
 /**

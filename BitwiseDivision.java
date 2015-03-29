@@ -1,5 +1,3 @@
-package com.facebook.eva.algorithm;
-
 /**
  * Created by Eva on 22.2.2015..
  */

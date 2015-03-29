@@ -1,12 +1,10 @@
-package com.facebook.eva.algorithm;
-
 /**
  * Created by Eva on 21.2.2015..
  */
 public class SquareRoot {
 
     /**
-     * Binary search for square root.
+     * Binary search for a square root.
      */
 
     public static int squareRoot(int x) {

@@ -1,5 +1,3 @@
-package com.facebook.eva.algorithm;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -215,7 +213,7 @@ public class Trees {
 
     private static final int K = 14;
 
-    private static final boolean USE_VALID_BINARY_SEARCH_TREE = false;
+    private static final boolean USE_VALID_BINARY_SEARCH_TREE = true;
 
     public static String testFindKth(boolean ascending) {
         StringBuilder result = new StringBuilder();
