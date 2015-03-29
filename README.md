@@ -14,16 +14,16 @@ Java implementation of algorithm coding questions that can be found on CareerCup
 - Find the celebrity
   * http://www.geeksforgeeks.org/the-celebrity-problem/
 - Given an array of patient files, sort files by importance. Importance values: low, medium and high.
-   * http://www.careercup.com/question?id=5080405046722560
+  * http://www.careercup.com/question?id=5080405046722560
 - Reverse a linked list
 - Calculate an expression with operators +, -, *, /
 - Given a string s and integer k, determine if a string is k-palindrome
-   * http://stackoverflow.com/questions/20892506/determine-if-a-given-string-is-a-k-palindrome
+  * http://stackoverflow.com/questions/20892506/determine-if-a-given-string-is-a-k-palindrome
 - Given an array of points, find K closest point to the origin in a 2D plane
-   * http://www.careercup.com/question?id=4751976126480384
+  * http://www.careercup.com/question?id=4751976126480384
 - Given a function getRandomTriplet() which returns a random triplet of letters from a string and a length of the string, guess the string
-   * http://www.careercup.com/question?id=5667679415304192
-   * This is a partial solution - works only for strings with non-repeating characters
+  * http://www.careercup.com/question?id=5667679415304192
+  * This is a partial solution - works only for strings with non-repeating characters
 - Find a integer square root using binary search
 - Reverse a char array with no additional space complexity
 - Given two strings, check if they are one edit apart. Edit = delete, insert or replace
@@ -36,5 +36,8 @@ Java implementation of algorithm coding questions that can be found on CareerCup
 - Given root of binary tree, return a list of sums for all root-leaf paths
 - Print binary tree level by level; breadth-first search (BFS)
 - Validate binary search tree
-
-  
+- Implement regular expression matching with support for '.' and '*'
+  * https://leetcode.com/problems/regular-expression-matching/
+- Print all possible words from phone digits
+  * http://www.geeksforgeeks.org/find-possible-words-phone-digits/
+- Given a dictionary of numbers corresponding to letters and a string made out of numbers, return all possible decoded strings (1 = a, 2 = b, 3 = c, etc.)
