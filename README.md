@@ -16,7 +16,7 @@ Java implementation of algorithm coding questions that can be found on CareerCup
 - Given an array of patient files, sort files by importance. Importance values: low, medium and high.
    * http://www.careercup.com/question?id=5080405046722560
 - Reverse a linked list
-- Calculate an expression with operators '+','-','*','/'
+- Calculate an expression with operators +, -, *, /
 - Given a string s and integer k, determine if a string is k-palindrome
    * http://stackoverflow.com/questions/20892506/determine-if-a-given-string-is-a-k-palindrome
 - Given an array of points, find K closest point to the origin in a 2D plane
